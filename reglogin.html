@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style>
+    @import 'https://fonts.googleapis.com/css?family=Dosis|Roboto:300,400'; 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(.jpg);
+    background-size: cover;
+}
+
+.container{
+    position:absolute;
+    width: auto;
+    height:auto;
+    top: calc(50% - 240px);
+    left: calc(50% - 160px);
+}
+
+form {
+    position: absolute;
+    text-align: center;
+    background: #fff;
+    width: 310px;
+    height: 470px;
+    border-radius: 5px;
+    padding: 30px 20px 0 20px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #87613d;
+    margin-bottom: 40px;
+}
+
+p > span {
+    padding-top: 3px;
+    display: block;
+    font-weight: 400;
+    font-size: 9px;
+}
+
+h3 {
+    font-family: 'Dosis';
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #87613d;
+    margin-bottom: 30px;
+}
+
+input,
+button{
+    outline: none !important; 
+}
+
+
+
+button.form-btn {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    bottom: 0;
+    border: 0;
+    font-family: 'Dosis';
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button.form-btn.sx {
+    left: 0;
+    border-radius: 0 0 0 5px;
+    background-color:#34495e;
+    color: #fff;
+    transition:all 0.3s linear;
+}
+
+button.form-btn.sx:hover {
+    background-color:#457aaf;
+    color: #fff;
+}
+
+button.form-btn.sx.back {
+    background-color: #34495e;
+    transition:all 0.3s linear;
+}
+
+button.form-btn.sx.back:hover {
+    background-color: #457aaf;
+}
+
+button.form-btn.dx {
+    right: 0;
+    border-radius: 0 0 5px 0;
+    background-color: cadetblue;
+    color: #fff;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 85%;
+    font-family: 'Roboto';
+    color: #87613d;
+    text-align: center;
+    font-size: 21px;
+    font-weight:100;
+    margin-bottom:25px;
+}
+        
+
+.signIn input,
+.signUp .w100 {
+    width: 100%;
+}
+
+.signIn{
+        z-index: 1;
+        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        opacity: 0.5;
+}
+
+.signUp {
+    z-index: 2;
+}
+
+.active-dx{
+    animation-name: foregrounding-dx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.active-sx{
+    animation-name: foregrounding-sx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.inactive-dx{
+    animation-name: overshadowing-dx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.inactive-sx{
+    animation-name: overshadowing-sx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes overshadowing-dx {
+    0%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    }
+    100%{
+        z-index: 1;
+        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        opacity: 0.5;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes overshadowing-sx {
+    0%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    }
+    100%{
+        z-index: 1;
+        transform: perspective(100px) translate3d(-100px, 0px, -30px);
+        opacity: 0.5;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes foregrounding-dx {
+    0%{
+        z-index:1;
+        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        opacity: 0.5;
+    }
+    50%{
+        z-index:2;
+        transform: perspective(100px) translate3d(400px, 0px, -30px);
+    }
+    100%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes foregrounding-sx {
+    0%{
+        z-index:1;
+        transform: perspective(100px) translate3d(-100px, 0px, -30px);
+        opacity: 0.5;
+    }
+    50%{
+        z-index:2;
+        transform: perspective(100px) translate3d(-400px, 0px, -30px);
+    }
+    100%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form class="signUp" action="HPTC.php" method="POST">
+        <h3>Create Your Account</h3>
+        <input type="text" placeholder="Enter First&Last Name" required name="fname" />
+        <input type="text" placeholder="Enter Username" required name="uname" />
+        <input class="w100" type="email" placeholder="Enter email" required autocomplete='off' name="email" />
+        <input type="password" placeholder="Enter Password" required name="pass" />
+        <input type="password" placeholder="Verify Password" required />
+        <button class="form-btn sx log-in" type="button">Log In</button>
+        <button class="form-btn dx" type="submit">Sign Up</button>
+    </form>
+    <form class="signIn" action="HPTC.php" method="POST">
+        <h3>Welcome</br>Back !</h3>
+        <input type="text" placeholder="Enter Username" autocomplete='off' required name="uname" />
+        <input type="password" placeholder="Enter Password" required name="pass" />
+        <button class="form-btn sx back" type="button">Back</button>
+        <button class="form-btn dx" type="submit">Log In</button>
+    </form>
+</div>
+<script>
+    $(".log-in").click(function(){
+    $(".signIn").addClass("active-dx");
+    $(".signUp").addClass("inactive-sx");
+    $(".signUp").removeClass("active-sx");
+    $(".signIn").removeClass("inactive-dx");
+});
+
+$(".back").click(function(){
+    $(".signUp").addClass("active-sx");
+    $(".signIn").addClass("inactive-dx");
+    $(".signIn").removeClass("active-dx");
+    $(".signUp").removeClass("inactive-sx");
+});
+    
+</script>
+</body>
+</html>

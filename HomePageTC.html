@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Travel Companion</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <style>
+            .carousel{
+                background: #2f4357;
+                margin-top: 0px;
+            }
+            .carousel-item{
+                text-align: center;
+                min-height: 320px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+            }
+            .bs-example{
+                margin: 0px;
+            }
+            </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background-color: #ddeeff;">
+                <a href="#" class="navbar-brand">Travel Companion</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                 </button>
+                
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link active">Home</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Explore</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Beaches</a>
+                            <a href="#" class="dropdown-item">Historical Sites</a>
+                            <a href="#" class="dropdown-item">Villages</a>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Destinations</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Dar es Salaam</a>
+                                <a href="#" class="dropdown-item">Zanzibar</a>
+                                <a href="#" class="dropdown-item">Arusha</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="form-inline">
+                        <div class="input-group">                    
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-secondary"><image src="icons8-search-48.png" width="20px"></image></button>
+                        </div>
+                        </div>
+                    </form>
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link">SignUp</a>
+                        <a href="#" class="nav-item nav-link">Sign In</a>
+                    </div>
+                </div>
+            </nav>
+            
+
+
+            <div class="bs-example  ">
+                <div id="myCarousel" class="carousel slide  " data-ride="carousel" data-pause="hover" data-interval="3000">
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner  ">
+                        <div class="carousel-item active col-lg-12">
+                            <a href="#"><img src="1.jpg" alt="First Slide" height="300px"  ></a>
+                        </div>
+                        <div class="carousel-item ">
+                            <a href="#"><img src="2.jpg" alt="Second Slide"  height="280px" ></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#"><img src="3.jpg" alt="Third Slide"  height="280px"></a>
+                        </div>
+                    </div>
+                    <!-- Carousel controls -->
+                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+            
+        	
+    </body>
+</html>
